@@ -7,8 +7,10 @@ import (
 )
 
 func main() {
-	_, err := config.DefaultConfig()
+	c, err := config.LoadConfig()
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	log.Println(c)
 }
